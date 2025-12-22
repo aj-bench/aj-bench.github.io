@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Primary Meta Tags -->
+  <!-- TODO: Replace with your paper title and author names -->
+  <meta name="title" content="AgentJudgeBench: Benchmarking Agent-as-a-Judge for
+  Environment-Aware Evaluation">
+  <!-- TODO: Write a compelling 150-160 character description of your research -->
+  <meta name="description" content="to be done">
+  <!-- TODO: Add 5-10 relevant keywords for your research area -->
+  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, to be done">
+  <!-- TODO: List all authors -->
+  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <!-- TODO: Replace with your institution or lab name -->
+  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME(to be done)">
+  <!-- TODO: Same as paper title above -->
+  <meta property="og:title" content="AgentJudgeBench: Benchmarking Agent-as-a-Judge for
+  Environment-Aware Evaluation">
+  <!-- TODO: Same as description above -->
+  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS(to be done)">
+  <!-- TODO: Replace with your actual website URL -->
+  <meta property="og:url" content="https://agent-judge-bench.github.io">
+  <!-- TODO: Create a 1200x630px preview image and update path -->
+  <meta property="og:image" content="https://agent-judge-bench.github.io/static/images/(to be done))">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="PAPER_TITLE(to be done) - Research Preview">
+  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
+  <meta property="article:author" content="FIRST_AUTHOR_NAME(to be done)">
+  <meta property="article:section" content="Research">
+  <meta property="article:tag" content="KEYWORD1">
+  <meta property="article:tag" content="KEYWORD2">
+  <!-- Academic/Research Specific -->
+  <meta name="citation_title" content="AgentJudgeBench: Benchmarking Agent-as-a-Judge for
+  Environment-Aware Evaluation">
+  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
+  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_conference_title" content="CONFERENCE_NAME">
+  <meta name="citation_pdf_url" content="https://agent-judge-bench.github.io/static/pdfs/paper.pdf(to be done)">
+
+  <!-- Additional SEO -->
+  <meta name="theme-color" content="#2563eb">
+  <meta name="msapplication-TileColor" content="#2563eb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://ajax.googleapis.com">
+  <link rel="preconnect" href="https://documentcloud.adobe.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+
+  <!-- TODO: Replace with your paper title and authors -->
+  <title>AgentJudgeBench: Benchmarking Agent-as-a-Judge for
+    Environment-Aware Evaluation - AUTHOR_NAMES | Academic Research</title>
+
+  <!-- Favicon and App Icons 标签页的图标 -->
+  <link rel="icon" href="data:,">
+  <!-- <link rel="apple-touch-icon" href="static/images/favicon.ico"> -->
+
+  <!-- Critical CSS - Load synchronously -->
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <!-- Non-critical CSS - Load asynchronously -->
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+
+  <!-- Fallback for browsers that don't support preload -->
+  <noscript>
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  </noscript>
+
+  <!-- Fonts - Optimized loading -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Defer non-critical JavaScript -->
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+
+  <!-- Structured Data for Academic Papers 论文信息，待修改-->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "AgentJudgeBench: Benchmarking Agent-as-a-Judge for
+    Environment-Aware Evaluation",
+    "description": "to be done",
+    "author": [
+      {
+        "@type": "Person",
+        "name": "FIRST_AUTHOR_NAME",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "INSTITUTION_NAME"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "SECOND_AUTHOR_NAME",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "INSTITUTION_NAME"
+        }
+      }
+      ,
+      {
+        "@type": "Person",
+        "name": "SECOND_AUTHOR_NAME",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "INSTITUTION_NAME"
+        }
+      }
+    ],
+    "datePublished": "2024-01-01",
+    "publisher": {
+      "@type": "Organization",
+      "name": "CONFERENCE_OR_JOURNAL_NAME"
+    },
+    "url": "https://agent-judge-bench.github.io",
+    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
+    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
+    "abstract": "FULL_ABSTRACT_TEXT_HERE",
+    "citation": "BIBTEX_CITATION_HERE",
+    "isAccessibleForFree": true,
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "mainEntity": {
+      "@type": "WebPage",
+      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "RESEARCH_AREA_1"
+      },
+      {
+        "@type": "Thing", 
+        "name": "RESEARCH_AREA_2"
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+  <main id="main-content">
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <!-- TODO: Replace with your paper title -->
+              <h1 class="title is-1 publication-title">AgentJudgeBench: Benchmarking Agent-as-a-Judge for
+                Environment-Aware Evaluation</h1>
+              <div class="is-size-5 publication-authors">
+                <!-- TODO: Replace with your paper authors and their personal links -->
+                <span class="author-block">
+                  <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <span class="author-block">
+                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                <span class="author-block">
+                  <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                </span>
+              </div>
+
+              <div class="is-size-5 publication-authors">
+                <!-- TODO: Replace with your institution and conference/journal info -->
+                <span class="author-block">Institution Name<br>Conference name and year</span>
+                <!-- TODO: Remove this line if no equal contribution -->
+                <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+              </div>
+
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <!-- TODO: Update with your arXiv paper ID -->
+                  <span class="link-block">
+                    <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">📄</span>
+                      <span>Paper</span>
+                    </a>
+                  </span>
+
+                  <!-- TODO: Replace with your GitHub repository URL -->
+                  <span class="link-block">
+                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">💻</span>
+                      <span>Code</span>
+                    </a>
+                  </span>
+
+                  <!-- Dataset link -->
+                  <span class="link-block">
+                    <a href="https://huggingface.co/datasets/YOUR_DATASET_HERE" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">🤗</span>
+                      <span>Dataset</span>
+                    </a>
+                  </span>
+
+                  <!-- Leaderboard anchor -->
+                  <span class="link-block">
+                    <a href="#Leaderboard" class="button is-normal is-rounded is-dark">
+                      <span class="icon">🏆</span>
+                      <span>Leaderboard</span>
+                    </a>
+                  </span>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Paper abstract -->
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-centered">
+              <!-- TODO: Replace with your paper abstract -->
+              <p>
+                to be done
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End paper abstract -->
+
+    <!-- Leaderboard -->
+    <section id="Leaderboard" class="section hero is-small">
+      <div class="container is-fluid" style="width: 75%; max-width: 100%;">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full">
+            <div class="content">
+              <h2 class="title is-3">🏆 Leaderboard</h2>
+              <p class="has-text-left" style="font-size:0.95rem; color: var(--text-secondary);">
+              </p>
+              <div class="table-container">
+                <table class="leaderboard-table">
+                  <thead>
+                    <tr>
+                      <th rowspan="2" class="model-col">Model</th>
+                      <th colspan="2" class="group-header">Search</th>
+                      <th colspan="2" class="group-header">MCP</th>
+                      <th colspan="3" class="group-header">OS</th>
+                    </tr>
+                    <tr>
+                      <th>Wide</th>
+                      <th>Deep</th>
+                      <th>FileSystem</th>
+                      <th>Notion</th>
+                      <th>PPT</th>
+                      <th>Word</th>
+                      <th>Excel</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="section-header">
+                      <td colspan="8">LLM-as-a-Judge</td>
+                    </tr>
+                    <tr class="subsection-header">
+                      <td colspan="8">Proprietary Models</td>
+                    </tr>
+                    <tr>
+                      <td class="model-name">gemini-3-pro-preview</td>
+                      <td>72.95</td>
+                      <td>81.65</td>
+                      <td>75.99</td>
+                      <td>--</td>
+                      <td>79.55</td>
+                      <td>70.83</td>
+                      <td>65.00</td>
+                    </tr>
+                    <tr>
+                      <td class="model-name">gemini-2.5-pro</td>
+                      <td>66.34</td>
+                      <td>80.98</td>
+                      <td>--</td>
+                      <td>--</td>
+                      <td>--</td>
+                      <td>--</td>
+                      <td>--</td>
+                    </tr>
+                    <tr>
+                      <td class="model-name">claude-opus-4-5</td>
+                      <td>63.58</td>
+                      <td>81.51</td>
+                      <td>66.66</td>
+                      <td>--</td>
+                      <td>77.27</td>
+                      <td>54.17</td>
+                      <td>75.00</td>
+                    </tr>
+                    <tr>
+                      <td class="model-name">claude-sonnet-4.5</td>
+                      <td>60.69</td>
+                      <td>81.38</td>
+                      <td>--</td>
+                      <td>--</td>
+                      <td>81.82</td>
+                      <td>62.50</td>
+                      <td>72.50</td>
+                    </tr>
+                    <tr>
+                      <td class="model-name">claude-sonnet-4.5-thinking</td>
+                      <td>--</td>
+                      <td>--</td>
+                      <td>--</td>
+                      <td>--</td>
+                      <td>72.73</td>
+                      <td>62.50</td>
+                      <td>65.00</td>
+                    </tr>
+                    <tr>
+                      <td class="model-name">gpt-5</td>
+                      <td>67.00</td>
+                      <td>80.25</td>
+                      <td>--</td>
+                      <td>--</td>
+                      <td>70.45</td>
+                      <td>58.33</td>
+                      <td>65.00</td>
+                    </tr>
+                    <tr>
+                      <td class="model-name">gpt-5-mini-low</td>
+                      <td>60.84</td>
+                      <td>69.25</td>
+                      <td>61.29</td>
+                      <td>--</td>
+                      <td>61.36</td>
+                      <td>52.78</td>
+                      <td>62.50</td>
+                    </tr>
+                    <tr>
+                      <td class="model-name">gpt-5.1</td>
+                      <td>58.64</td>
+                      <td>70.53</td>
+                      <td>21.91</td>
+                      <td>--</td>
+                      <td>63.64</td>
+                      <td>58.33</td>
+                      <td>62.50</td>
+                    </tr>
+                    <tr>
+                      <td class="model-name">grok-4</td>
+                      <td>--</td>
+                      <td>--</td>
+                      <td>76.69</td>
+                      <td>--</td>
+                      <td>--</td>
+                      <td>--</td>
+                      <td>--</td>
+                    </tr>
+
+                    <tr class="subsection-header">
+                      <td colspan="8">Open-Source Models</td>
+                    </tr>
+                    <tr>
+                      <td class="model-name">kimi-k2-0905-preview</td>
+                      <td>63.40</td>
+                      <td>80.67</td>
+                      <td>55.17</td>
+                      <td>--</td>
+                      <td>68.18</td>
+                      <td>41.76</td>
+                      <td>57.50</td>
+                    </tr>
+                    <tr>
+                      <td class="model-name">deepseek-chat</td>
+                      <td>63.48</td>
+                      <td>62.46</td>
+                      <td>56.48</td>
+                      <td>--</td>
+                      <td>68.94</td>
+                      <td>68.05</td>
+                      <td>68.33</td>
+                    </tr>
+                    <tr>
+                      <td class="model-name">qwen3-235b-a22b</td>
+                      <td>62.99</td>
+                      <td>81.63</td>
+                      <td>63.94</td>
+                      <td>--</td>
+                      <td>61.36</td>
+                      <td>50.00</td>
+                      <td>57.50</td>
+                    </tr>
+                    <tr>
+                      <td class="model-name">glm-4.6v</td>
+                      <td>--</td>
+                      <td>--</td>
+                      <td>--</td>
+                      <td>--</td>
+                      <td>72.73</td>
+                      <td>58.33</td>
+                      <td>77.50</td>
+                    </tr>
+                    <tr>
+                      <td class="model-name">longcat-flash-chat</td>
+                      <td>64.06</td>
+                      <td>77.09</td>
+                      <td>--</td>
+                      <td>--</td>
+                      <td>--</td>
+                      <td>--</td>
+                      <td>--</td>
+                    </tr>
+
+                    <tr class="section-header">
+                      <td colspan="8">Agent-as-a-Judge</td>
+                    </tr>
+                    <tr class="subsection-header">
+                      <td colspan="8">Proprietary Models</td>
+                    </tr>
+                    <tr>
+                      <td class="model-name">gpt-5-mini-low</td>
+                      <td>68.79</td>
+                      <td>75.87</td>
+                      <td>70.86</td>
+                      <td>--</td>
+                      <td>78.03</td>
+                      <td>72.22</td>
+                      <td>84.17</td>
+                    </tr>
+
+                    <tr class="subsection-header">
+                      <td colspan="8">Open-Source Models</td>
+                    </tr>
+                    <tr>
+                      <td class="model-name">deepseek-chat</td>
+                      <td>74.30</td>
+                      <td>82.24</td>
+                      <td>72.97</td>
+                      <td>--</td>
+                      <td>84.09</td>
+                      <td>77.78</td>
+                      <td>78.33</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Leaderboard -->
+
+    <!--BibTex citation -->
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <div class="bibtex-header">
+          <h2 class="title">BibTeX</h2>
+          <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+            <i class="fas fa-copy"></i>
+            <span class="copy-text">Copy</span>
+          </button>
+        </div>
+        <pre id="bibtex-code"><code>to be done
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
