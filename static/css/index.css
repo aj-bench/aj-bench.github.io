@@ -123,10 +123,10 @@ body {
 }
 
 .publication-banner {
-  max-height: 70vh;
+  max-height: none;
   border-radius: var(--border-radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-xl);
+  box-shadow: none;
   margin: 2rem 0;
 }
 
@@ -207,14 +207,15 @@ body {
 
 .publication-banner img {
   border-radius: var(--border-radius-lg);
-  box-shadow: var(--shadow-lg);
+  box-shadow: none;
   transition: var(--transition);
 }
 
+/* 
 .publication-banner img:hover {
-  transform: scale(1.02);
   box-shadow: var(--shadow-xl);
-}
+} 
+*/
 
 /* Modern Video and Carousel Styling */
 .publication-video {
@@ -424,7 +425,7 @@ code {
   background: #f8fafc;
   font-weight: 700;
   color: var(--text-secondary);
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   letter-spacing: 0.05em;
   padding: 1rem;
   vertical-align: middle;
@@ -473,20 +474,21 @@ code {
   background: linear-gradient(90deg, #eff6ff, white);
   color: #1e3a8a;
   /* Darker blue */
-  font-size: 1.3rem;
-  /* Larger font for title-like appearance */
+  font-size: 1.15rem;
+  /* Slightly smaller title */
   font-weight: 800;
   text-align: center;
   /* Center alignment for title style */
   border-left: none;
   /* Remove side accent */
-  border-bottom: 3px solid #3b82f6;
+  border-bottom: 2px solid #3b82f6;
   /* Bottom accent line */
   padding: 0;
 }
 
 .leaderboard-table .section-header td {
-  padding: 1.5rem 2rem;
+  padding: 0.8rem 1.5rem;
+  /* Reduced height */
   border: none;
   border-top: 1px solid var(--border-color);
   text-align: center;
@@ -494,42 +496,31 @@ code {
 }
 
 /* Subsection Headers (Proprietary / Open-Source) */
+/* Subsection Headers (Proprietary / Open-Source) */
 .leaderboard-table .subsection-header {
-  background: white;
-  color: var(--text-secondary);
-  font-weight: 600;
-  font-size: 0.95rem;
-  font-style: italic;
-  /* Restore italic if desired, or keep normal but mixed case */
-  /* text-transform: uppercase; REMOVED */
-  letter-spacing: 0.02em;
+  background: #ffffff;
+  /* Clean white */
+  color: #64748b;
+  /* Slate-500 */
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  /* text-transform: uppercase; Removed per request */
+  border-bottom: 2px solid #e2e8f0;
 }
 
 .leaderboard-table .subsection-header td {
-  padding: 1rem 2rem;
-  text-align: left;
+  padding: 0.4rem 1rem;
+  /* Reduced padding for narrower row */
+  text-align: center;
+  display: table-cell;
   border: none;
-  border-bottom: 1px solid #f1f5f9;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-/* Add a small dot styling for subsection */
-.leaderboard-table .subsection-header td::before {
-  content: '';
-  display: inline-block;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--accent-color);
-  opacity: 0.7;
+  vertical-align: middle;
 }
 
 /* Row Striping */
 .leaderboard-table tbody tr:not(.section-header):not(.subsection-header):nth-child(even) {
   background-color: #f8fafc;
-  /* Very light grey for alternate rows */
 }
 
 .leaderboard-table tbody tr:hover {
@@ -537,20 +528,70 @@ code {
 }
 
 .leaderboard-table .model-name {
-  text-align: left;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--text-primary);
   white-space: nowrap;
-  background-color: white;
-  /* Ensure model name stays clean */
+  background-color: transparent !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-/* Ensure alternate rows also color the model name cell if transparent, 
-   but let's keep model name white or matching the row? 
-   Matching the row looks better for consistency. */
 .leaderboard-table tbody tr:not(.section-header):not(.subsection-header):nth-child(even) .model-name {
-  background-color: #f8fafc;
+  background-color: #f8fafc !important;
 }
+
+.leaderboard-table tbody tr:hover .model-name {
+  background-color: #f1f5f9 !important;
+}
+
+/* Model Logo */
+.model-logo {
+  width: 20px;
+  /* Slightly smaller for elegance */
+  height: 20px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+/* Section Icon (Proprietary/OpenSource) */
+.section-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  vertical-align: middle;
+  margin-right: 8px;
+  margin-bottom: 3px;
+  /* visual alignment */
+}
+
+/* Beautified Agentic Icons - LaTeX Style */
+.agentic-icon {
+  display: inline-block;
+  font-size: 1.1rem;
+  line-height: 1;
+  background: none;
+  width: auto;
+  height: auto;
+  padding: 0;
+}
+
+/* LaTeX \cmark style (Green Check) */
+.agentic-icon.is-yes {
+  color: #10b981;
+  /* Emerald-500, nicer than pure green */
+  background-color: transparent;
+}
+
+/* LaTeX \xmark style (Red Cross or Grey) */
+.agentic-icon.is-no {
+  color: #ff0000;
+  /* Bright Red */
+  background-color: transparent;
+  opacity: 1;
+  /* Explicit opaque */
+}
+
 
 /* Darker colors for numeric columns */
 .leaderboard-table td:not(.model-name) {
