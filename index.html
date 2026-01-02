@@ -101,6 +101,8 @@
   <script defer src="static/js/bulma-carousel.min.js"></script>
   <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
+  <script src="https://fastly.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  <script defer src="static/js/benchmark_chart.js"></script>
 
   <!-- Structured Data for Academic Papers 论文信息，待修改-->
   <script type="application/ld+json">
@@ -293,13 +295,32 @@
         <div class="columns is-centered has-text-centered">
           <div class="column is-full">
             <h2 class="title is-3">Dataset Composition</h2>
-            <!-- Modified to remove shadow, remove height limit, and reduce width -->
-            <div class="publication-banner" style="width: 60%; margin: 2rem auto;">
-              <img src="static/images/benchmark_statistics.png" alt="Dataset Statistics" style="width: 100%;">
+            <div class="columns is-vcentered">
+              <div class="column is-6">
+                <!-- Chart Container -->
+                <div id="benchmark-chart-container" style="width: 100%; height: 800px;"></div>
+              </div>
+              <div class="column is-6 has-text-left">
+                <!-- Text Content -->
+                <h3 class="title is-4">Diverse & Comprehensive</h3>
+                <div class="content">
+                  <p>
+                    The AgentJudgeBench dataset comprises a rich variety of tasks spanning three main categories:
+                  </p>
+                  <ul>
+                    <li><strong>Search:</strong> Covers both deep (specialized) and wide (general) information retrieval
+                      tasks.</li>
+                    <li><strong>Data Science (DS):</strong> Involves file system operations and PostgreSQL database
+                      management.</li>
+                    <li><strong>GUI Automation:</strong> Includes tasks for Microsoft PowerPoint, Word, and Excel.</li>
+                  </ul>
+                  <p>
+                    This multi-level taxonomy ensures a thorough evaluation of agent capabilities across different
+                    domains and difficulty levels.
+                  </p>
+                </div>
+              </div>
             </div>
-            <p class="subtitle is-6" style="margin-top: 10px; color: var(--text-secondary);">
-              Detailed statistics and composition of the AgentJudgeBench dataset.
-            </p>
           </div>
         </div>
       </div>
@@ -493,7 +514,9 @@
                       <td>80.00</td>
                     </tr>
                     <tr>
-                      <td class="model-name">longcat-flash-chat</td>
+                      <td class="model-name"><img src="static/images/longcat-color.svg" class="model-logo"
+                          alt="LongCat">
+                        longcat-flash-chat</td>
                       <td><span class="agentic-icon is-no">&#10007;</span></td>
                       <td>64.06</td>
                       <td>77.09</td>
