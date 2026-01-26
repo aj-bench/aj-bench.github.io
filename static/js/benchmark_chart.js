@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             padding: 2,
                             position: 'inside',
                             overflow: 'break',
-                            width: 160,
+                            width: 200,
                             formatter: function (params) {
                                 return params.name + ' (' + params.value + ')';
                             }
